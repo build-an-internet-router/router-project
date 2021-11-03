@@ -137,7 +137,7 @@ You can try running standard Mininet commands in the Mininet console to test you
 
 # Hints and Tips
 
-* Take a look at some [general p4app debugging tips](https://2021-cs344.github.io/documentation/debugging-p4app/).
+* Take a look at some [general p4app debugging tips](https://build-an-internet-router.github.io/documentation/debugging-p4app/).
 * Are you handling PWOSPF HELLO packets correctly in the data-plane? What IP address are they sent to?
 * Be sure to make use of the P4RT commands (e.g., `insertTableEntry()`, `printTableEntries()`) to add/inspect table entries.
 * Possible initial tests:
@@ -145,7 +145,7 @@ You can try running standard Mininet commands in the Mininet console to test you
     * Can you ping each of the routers interfaces?
     * Is the router responding to ARP requests?
     * Be careful if you are trying to ping one interface from the other. Unless you are careful, linux will force the traffic to use the loopback interface rather than sending packets out onto the wire. [It is possible](https://serverfault.com/questions/127636/force-local-ip-traffic-to-an-external-interface) to do this, but it'll be easier (and less confusing) if you can arrange a time with a neighboring group to use their NIC. Then you can do small tests like sending pings through the router, traceroute to and through the router, send iperf flows through the router, and so on.
-* Inspect the Mininet network by [launching the Mininet console from the p4app entry point](https://github.com/2021-cs344/p4app/blob/rc-2.0.0/examples/wire.p4app/main.py#L13), e.g.,
+* Inspect the Mininet network by [launching the Mininet console from the p4app entry point](https://github.com/build-an-internet-router/p4app/blob/rc-2.0.0/examples/wire.p4app/main.py#L13), e.g.,
     * `mininet> h1 ifconfig`
 * Configure interface with IP address:
     * `# ifconfig eth1 1.2.3.4 netmask 255.255.255.0`
